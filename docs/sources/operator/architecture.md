@@ -52,8 +52,8 @@ and `LogsInstance` that match the labels `app.kubernetes.io/name: loki` and `app
 
 ### Debug the Hierarchy
 
-The generated configurations are save in secrets. They can be downloaded and
-validated manually with the following commands.
+The generated configurations are saved in secrets. To download and
+validate them manually, use the following commands:
 
 ```
 $ kubectl get secrets <???>-logs-config -o json | jq -r '.data."agent.yml"' | base64 --decode
