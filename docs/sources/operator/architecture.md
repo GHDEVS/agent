@@ -45,9 +45,8 @@ GrafanaAgents to be reconciled.
 
 ### Build the Hierarchy
 
-The hierarchy is built via label matching on the custom resources. Below is a
-graph illustrating the matching. The `GrafanaAgent` picks up the `MetricsInstance`
-and `LogsInstance` that match the labels `app.kubernetes.io/name: loki` and `app.kubernetes.io/instance: release-name`. The instances pick up the resources the same way.
+Grafana Agent Operator builds the hierarchy using label matching on the custom resources. The following figure illustrates the matching. The `GrafanaAgent` picks up the `MetricsInstance`
+and `LogsInstance` that match the labels `app.kubernetes.io/name: loki` and `app.kubernetes.io/instance: release-name`, respectively. The instances pick up the resources the same way.
 
 <img src="../../assets/hierarchy.svg" alt="Hierarchy" />
 
